@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
-import { GlobalVariableContex } from "../App";
-
+import AdminLogin from "./webUsers/AdminLogin";
+import AdminLogout from "./webUsers/AdminLogout";
+import AdminRegister from "./webUsers/AdminRegister";
+import AdminVerify from "./webUsers/AdminVerify";
 
 const ReactRouter = () => {
-  let { token, setToken } = useContext(GlobalVariableContex);
   return (
     <div>
       <Routes>
@@ -18,13 +19,11 @@ const ReactRouter = () => {
             <Route index element={<div>This is admin dashBoard</div>}></Route>
             <Route path="register" element={<AdminRegister />}></Route>
 
-            {token ? (
-              <>
-                <Route path="logout" element={<AdminLogout />}></Route>
-              </>
-            ) : (
-              <Route path="login" element={<AdminLogin />}></Route>
-            )}
+            <>
+              <Route path="logout" element={<AdminLogout />}></Route>
+            </>
+
+            <Route path="login" element={<AdminLogin />}></Route>
           </Route>
         </Route>
         <Route path="*" element={<div>404 Page</div>}></Route>
