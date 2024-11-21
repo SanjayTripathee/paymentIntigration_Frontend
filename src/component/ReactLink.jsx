@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { GlobalVariableContex } from "../App";
 // import { GlobalVariableContex } from "../App";
 
 const ReactLink = () => {

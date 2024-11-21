@@ -1,18 +1,7 @@
 import React, { useContext } from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
-import AdminLogin from "./webUsers/AdminLogin";
-import AdminLogout from "./webUsers/AdminLogout";
-import AdminProfile from "./webUsers/AdminProfile";
-import AdminRegister from "./webUsers/AdminRegister";
-import AdminVerify from "./webUsers/AdminVerify";
-import AdminProfileUpdate from "./webUsers/AdminProfileUpdate";
-import AdminPasswordUpdate from "./webUsers/AdminPasswordUpdate";
-import AdminForgetPassword from "./webUsers/AdminForgetPassword";
-import AdminResetPassword from "./webUsers/AdminResetPassword";
-import ReadAllUser from "./webUsers/ReadAllUser";
-import ReadSpeceficUser from "./webUsers/ReadSpeceficUser";
-import UpdateSpeceficUser from "./webUsers/UpdateSpeceficUser";
 import { GlobalVariableContex } from "../App";
+
 
 const ReactRouter = () => {
   let { token, setToken } = useContext(GlobalVariableContex);
