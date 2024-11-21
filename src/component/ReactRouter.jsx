@@ -23,7 +23,7 @@ const ReactRouter = () => {
               <Route path="logout" element={<AdminLogout />}></Route>
             </>
 
-            <Route path="login" element={<AdminLogin />}></Route>
+            <Route path="log-in" element={<AdminLogin />}></Route>
           </Route>
         </Route>
         <Route path="*" element={<div>404 Page</div>}></Route>
