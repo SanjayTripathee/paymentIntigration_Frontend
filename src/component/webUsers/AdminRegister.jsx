@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { bUrl } from "../../constant";
+import "../cssfolder/adminRegister.css";
 
 const AdminRegister = () => {
   let [fullName, setFullName] = useState("");
