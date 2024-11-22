@@ -4,10 +4,7 @@ import AdminLogin from "./webUsers/AdminLogin";
 import AdminLogout from "./webUsers/AdminLogout";
 import AdminRegister from "./webUsers/AdminRegister";
 import AdminVerify from "./webUsers/AdminVerify";
-import CreateProduct from "./Product/CreateProduct";
-import ReadAllProduct from "./Product/ReadAllProduct";
-import ProductDetails from "./Product/ProductDetails";
-import UpdateProduct from "./Product/UpdateProduct";
+import ProductRouter from "./route/ProductRouter";
 
 const ReactRouter = () => {
   return (
@@ -16,6 +13,8 @@ const ReactRouter = () => {
         <Route path="/" element={<Outlet></Outlet>}>
           {/* index on a Route, it means that this route will be rendered when the parent route's path is matched exactly. */}
           <Route index element={<div>Home Page</div>}></Route>
+
+          <Route path='/product/*' element={<ProductRouter/>}></Route>  
 
           <Route path="verify-email" element={<AdminVerify />}></Route>
 
@@ -29,11 +28,6 @@ const ReactRouter = () => {
 
             <Route path="log-in" element={<AdminLogin />}></Route>
           </Route>
-
-          <Route path="/create" element={<CreateProduct />}></Route>
-          <Route path="/" element={<ReadAllProduct />}></Route>
-          <Route path="/:id" element={<ProductDetails />}></Route>
-          <Route path="/update/:id" element={<UpdateProduct />}></Route>
         </Route>
 
         <Route path="*" element={<div>404 Page</div>}></Route>
