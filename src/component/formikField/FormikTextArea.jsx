@@ -1,18 +1,18 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
 
-const FormikInput = ({ name, label, type, onChange, ...props }) => {
+const FormikTextArea = ({ name, label, onChange, ...props }) => {
   return (
     <div>
       <Field name={name}>
         {({ field, form, meta }) => (
           <div>
             <label htmlFor={name}>{label}</label>
-            <input
+            <textarea
               {...field}
               {...props}
               id={name}
-              type={type}
+              type="description"
               value={meta.value}
               // onChange={field.onChange} //short cut of <formicForm/>component code i.e onChange={(e) => {Formik.setFieldValue("firstName", e.target.value);  }}
               onChange={onChange ? onChange : field.onChange}
@@ -27,4 +27,4 @@ const FormikInput = ({ name, label, type, onChange, ...props }) => {
   );
 };
 
-export default FormikInput;
+export default FormikTextArea;

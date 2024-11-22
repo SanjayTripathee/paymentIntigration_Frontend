@@ -1,22 +1,28 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
 
-const FormikInput = ({ name, label, type, onChange, ...props }) => {
+const FormikSelect = ({ name, label, onChange, options, ...props }) => {
   return (
     <div>
       <Field name={name}>
         {({ field, form, meta }) => (
           <div>
             <label htmlFor={name}>{label}</label>
-            <input
+            <select
               {...field}
               {...props}
               id={name}
-              type={type}
               value={meta.value}
-              // onChange={field.onChange} //short cut of <formicForm/>component code i.e onChange={(e) => {Formik.setFieldValue("firstName", e.target.value);  }}
               onChange={onChange ? onChange : field.onChange}
-            />
+            >
+              {options?.map((item, i) => {
+                return (
+                  <option key={i} value={item.value}>
+                    {item.label}
+                  </option>
+                );
+              })}
+            </select>
             {meta.touched && meta.error ? (
               <div style={{ color: "red" }}>{meta.error}</div>
             ) : null}
@@ -27,4 +33,4 @@ const FormikInput = ({ name, label, type, onChange, ...props }) => {
   );
 };
 
-export default FormikInput;
+export default FormikSelect;
