@@ -90,19 +90,8 @@ const FormProductUi = (
 
           <div>
             <label htmlFor="productImage">Product Image:</label>
-            <input
-              ref={ref}
-              id="productImage"
-              type="file"
-              onChange={handleImage}
-            />
-            {productImage && (
-              <img
-                src={productImage}
-                alt="product"
-                style={{ width: "200px", height: "200px" }}
-              />
-            )}
+            <input ref={ref} id="productImage" type="file" onChange={handleImage} />
+            { productImage && (<img src={productImage} alt="product" style={{ width: "200px" ,height:"200px"}} />)}
           </div>
         </div>
 

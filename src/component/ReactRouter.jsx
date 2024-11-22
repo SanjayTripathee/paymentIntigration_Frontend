@@ -5,6 +5,7 @@ import AdminLogout from "./webUsers/AdminLogout";
 import AdminRegister from "./webUsers/AdminRegister";
 import AdminVerify from "./webUsers/AdminVerify";
 import ProductRouter from "./route/ProductRouter";
+import HomePage from "./Product/HomePage";
 
 const ReactRouter = () => {
   return (
@@ -12,7 +13,7 @@ const ReactRouter = () => {
       <Routes>
         <Route path="/" element={<Outlet></Outlet>}>
           {/* index on a Route, it means that this route will be rendered when the parent route's path is matched exactly. */}
-          <Route index element={<div>Home Page</div>}></Route>
+          <Route index element={<HomePage/>}></Route>
 
           <Route path='/product/*' element={<ProductRouter/>}></Route>  
 
