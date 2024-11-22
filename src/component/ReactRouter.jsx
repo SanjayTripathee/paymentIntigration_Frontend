@@ -25,7 +25,19 @@ const ReactRouter = () => {
 
             <Route path="log-in" element={<AdminLogin />}></Route>
           </Route>
+
+          <div>
+          <Routes>
+            <Route path="/create" element={<CreateProduct />}></Route>
+            <Route path="/" element={<ReadAllProduct />}></Route>
+            <Route path="/:id" element={<ProductDetails />}></Route>
+            <Route path="/update/:id" element={<UpdateProduct />}></Route>
+          </Routes>
+        </div>
+        
         </Route>
+
+       
         <Route path="*" element={<div>404 Page</div>}></Route>
       </Routes>
     </div>

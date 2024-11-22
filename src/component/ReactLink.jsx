@@ -14,6 +14,9 @@ const ReactLink = () => {
       </>
 
       <NavLink to="/admin/log-in">Admin Login</NavLink>
+
+      <NavLink  to='/product' style={{marginRight:"20px"}}>Product</NavLink>
+      <NavLink to='/product/create' style={{marginRight:"20px"}}>Create Product</NavLink>
     </nav>
   );
 };
