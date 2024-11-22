@@ -5,9 +5,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import FormProductUi from './FormProductUi';
 import { bUrl } from '../../constant';
 
-
-
-
 const UpdateProduct = () => {
   let [name,setName] = useState("")
   let [price,setPrice] = useState()
