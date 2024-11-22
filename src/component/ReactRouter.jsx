@@ -4,6 +4,10 @@ import AdminLogin from "./webUsers/AdminLogin";
 import AdminLogout from "./webUsers/AdminLogout";
 import AdminRegister from "./webUsers/AdminRegister";
 import AdminVerify from "./webUsers/AdminVerify";
+import CreateProduct from "./Product/CreateProduct";
+import ReadAllProduct from "./Product/ReadAllProduct";
+import ProductDetails from "./Product/ProductDetails";
+import UpdateProduct from "./Product/UpdateProduct";
 
 const ReactRouter = () => {
   return (
@@ -26,18 +30,12 @@ const ReactRouter = () => {
             <Route path="log-in" element={<AdminLogin />}></Route>
           </Route>
 
-          <div>
-          <Routes>
-            <Route path="/create" element={<CreateProduct />}></Route>
-            <Route path="/" element={<ReadAllProduct />}></Route>
-            <Route path="/:id" element={<ProductDetails />}></Route>
-            <Route path="/update/:id" element={<UpdateProduct />}></Route>
-          </Routes>
-        </div>
-        
+          <Route path="/create" element={<CreateProduct />}></Route>
+          <Route path="/" element={<ReadAllProduct />}></Route>
+          <Route path="/:id" element={<ProductDetails />}></Route>
+          <Route path="/update/:id" element={<UpdateProduct />}></Route>
         </Route>
 
-       
         <Route path="*" element={<div>404 Page</div>}></Route>
       </Routes>
     </div>

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ReadAllProduct = () => {
-  return (
-    <div>ReadAllProduct</div>
-  )
-}
+  return <div>ReadAllProduct</div>;
+};
 
-export default ReadAllProduct
+export default ReadAllProduct;
