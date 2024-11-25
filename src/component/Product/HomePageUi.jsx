@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomePageUi = ({ product }) => {
+const HomePageUi = ({ product, buttonName }) => {
   return (
     <div
       style={{
@@ -87,6 +87,30 @@ const HomePageUi = ({ product }) => {
             >
               Quantity: {item.quantity}
             </p>
+            <button
+              onClick={() => handleBuy(item._id)}
+              style={{
+                padding: "10px 20px",
+                fontSize: "16px",
+                fontWeight: "bold",
+                color: "#ffffff",
+                backgroundColor: "#007bff",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+                transition: "background-color 0.3s ease, transform 0.2s ease",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.backgroundColor = "#0056b3";
+                e.currentTarget.style.transform = "scale(1.05)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.backgroundColor = "#007bff";
+                e.currentTarget.style.transform = "scale(1)";
+              }}
+            >
+              {buttonName}
+            </button>
           </div>
         ))}
       </div>

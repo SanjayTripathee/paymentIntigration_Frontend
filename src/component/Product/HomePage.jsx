@@ -32,7 +32,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <HomePageUi product={product} />
+      <HomePageUi product={product} buttonName="Buy" />
     </div>
   );
 };
