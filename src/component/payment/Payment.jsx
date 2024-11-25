@@ -1,43 +1,41 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import PriceSidebar from "./PriceSidebar";
-import Stepper from "./Stepper";
-import { clearErrors } from "../../actions/orderAction";
-import { useSnackbar } from "notistack";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { clearErrors } from "../../actions/orderAction";
 import MetaData from "../Layouts/MetaData";
+import PriceSidebar from "./PriceSidebar";
+import Stepper from "./Stepper";
 
 const Payment = () => {
-  const dispatch = useDispatch();
-  const { enqueueSnackbar } = useSnackbar();
-  const { shippingInfo, cartItems } = useSelector((state) => state.cart);
-  // const { user } = useSelector((state) => state.user);
-  const { error } = useSelector((state) => state.newOrder);
+  // const dispatch = useDispatch();
+  // const { enqueueSnackbar } = useSnackbar();
+  // const { shippingInfo, cartItems } = useSelector((state) => state.cart);
+  // // const { user } = useSelector((state) => state.user);
+  // const { error } = useSelector((state) => state.newOrder);
 
   const [payDisable, setPayDisable] = useState(false);
-  const totalPrice = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+  // const totalPrice = cartItems.reduce(
+  //   (sum, item) => sum + item.price * item.quantity,
+  //   0
+  // );
 
   const paymentData = {
-    itemId: cartItems[0].product,
-    totalPrice: totalPrice,
-    name: cartItems[0].name,
+    itemId: "product",
+    totalPrice: 10,
+    name: "test",
   };
 
   //test data
 
-  // const paymentData = {
-  //   return_url: "http://localhost:4000/api/v1/payment/complete",
-  //   itemId: "12",
-  //   totalPrice: 10,
-  //   name: "test",
-  // };
+  const paymentData1 = {
+    return_url: "http://localhost:8000/payment/complete",
+    itemId: "12",
+    totalPrice: 10,
+    name: "test",
+  };
 
   const submitHandler = async (e) => {
     e.preventDefault();
