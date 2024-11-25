@@ -13,6 +13,7 @@ const App = () => {
         <ReactLink />
         <ReactRouter />
       </GlobalVariableContex.Provider>
+      {/* <Payment/> */}
     </div>
   );
 };

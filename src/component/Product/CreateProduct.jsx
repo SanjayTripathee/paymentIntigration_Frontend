@@ -1,8 +1,9 @@
+import axios from "axios";
 import React, { useRef, useState } from "react";
 import { toast } from "react-toastify";
-import axios from "axios";
-import FormProductUi from "./FormProductUi";
 import { bUrl } from "../../constant";
+import FormProductUi from "./FormProductUi";
+
 
 const CreateProduct = () => {
   let [name, setName] = useState("");

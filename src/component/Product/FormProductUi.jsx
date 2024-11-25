@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { forwardRef } from "react";
-import { bUrl } from "../../constant";
 import { toast } from "react-toastify";
+import { bUrl } from "../../constant";
 
 const FormProductUi = (
   {
@@ -90,8 +90,19 @@ const FormProductUi = (
 
           <div>
             <label htmlFor="productImage">Product Image:</label>
-            <input ref={ref} id="productImage" type="file" onChange={handleImage} />
-            { productImage && (<img src={productImage} alt="product" style={{ width: "200px" ,height:"200px"}} />)}
+            <input
+              ref={ref}
+              id="productImage"
+              type="file"
+              onChange={handleImage}
+            />
+            {productImage && (
+              <img
+                src={productImage}
+                alt="product"
+                style={{ width: "200px", height: "200px" }}
+              />
+            )}
           </div>
         </div>
 
