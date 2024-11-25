@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const HomePageUi = ({ product, buttonName }) => {
+  let navigate = useNavigate();
+  let handleBuy = (id) => {
+    return (e) => {
+      navigate(`/payment/process`);   
+    };
+  };
   return (
     <div
       style={{
