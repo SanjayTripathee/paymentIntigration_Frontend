@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 
 const HomePageUi = ({ product, buttonName }) => {
   let navigate = useNavigate();
-  async function handleClick (e) {
+  let handleClick = async(e)=> {
     const paymentData = {
       itemId: "product",
       totalPrice: 10,
