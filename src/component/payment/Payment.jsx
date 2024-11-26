@@ -23,40 +23,14 @@ const Payment = () => {
 
   //test data
 
-  const paymentData1 = {
-    return_url: "http://localhost:8000/payment/complete",
-    itemId: "12",
-    totalPrice: 10,
-    name: "test",
-  };
+  // const paymentData1 = {
+  //   return_url: "http://localhost:8000/payment/complete",
+  //   itemId: "12",
+  //   totalPrice: 10,
+  //   name: "test",
+  // };
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
-    // console.log(cartItems.product)
-    setPayDisable(true);
-    try {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-      const { data } = await axios.post(
-        "/api/v1/payment/process",
-        paymentData,
-        config
-      );
 
-      window.location.href = data.response.payment_url;
-
-    //   dispatch(clearErrors());
-    // } catch (error) {
-    //   setPayDisable(false);
-    //   enqueueSnackbar(error, { variant: "error" });
-    // }
-    }catch(error){
-      toast.error(error.response.data.message);
-    }
-  };
 
   useEffect(() => {
     // console.log(cartItems);

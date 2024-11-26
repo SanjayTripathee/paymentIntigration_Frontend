@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 import ReactLink from "./component/ReactLink";
 import ReactRouter from "./component/ReactRouter";
+import Payment from "./component/payment/Payment";
 
 export let GlobalVariableContex = createContext();
 const App = () => {
