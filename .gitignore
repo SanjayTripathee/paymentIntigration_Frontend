@@ -26,6 +26,10 @@ dist-ssr
 
 
 # Ignore node_modules
-node_modules
+node_modules/
 
+# Ignore contact.js
+contact.js
+
+# Ignore environment file
 .env
